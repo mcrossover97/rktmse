@@ -8,14 +8,14 @@ A Moose-Based Application Coupled with the Reaktoro Geochemical Library.
 
 To use this application, you should have both [MOOSE](https://mooseframework.inl.gov/) and [Reaktoro](https://reaktoro.org/) installed.
 
-## MOOSE Installation
+## 1. MOOSE Installation
 
 The instructions to install MOOSE can be found in the following webpage:
 https://mooseframework.inl.gov/getting_started/installation/
 
 Please follow the instructions exactly as they are.
 
-## Reaktoro Installation
+## 2. Reaktoro Installation
 
 The instructions to install Reaktoro can be found in the following webpage:
 https://reaktoro.org/installation.html
@@ -35,7 +35,7 @@ ADDITIONAL_INCLUDES += -I /home/mcrossover97/reaktoro/build/install/include/Reak
 ```
 By doing this, MOOSE will also uses the Eigen version used by Reaktoro and has no problem with this.
 
-## Building RKTMSE Application
+## 3. Building RKTMSE Application
 
 Clone the application running the following command:
 ```git clone https://github.com/mcrossover97/rktmse.git```
