@@ -14,7 +14,7 @@ The instructions to install MOOSE can be found [here](https://mooseframework.inl
 
 ## 2. Reaktoro Installation
 
-The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Please install Reaktoro using CMake and change the configuration of the application's Makefile (`rktmse.mk`), modifying `ADDITIONAL_INCLUDES`, `ADDITIONAL_LIBS`, and `LDFLAGS` with respect to the Reaktoro's install directory. After installing Reaktoro, remove the Eigen library located in the moose environment:
+The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Please install Reaktoro using CMake and change the configuration of the application's Makefile (`rktmse.mk`), modifying `ADDITIONAL_INCLUDES`, `ADDITIONAL_LIBS`, and `LDFLAGS` with respect to the Reaktoro's install directory. After installing Reaktoro, remove the Eigen library located in the `moose` environment:
 ```
 cd /path/to/conda/envs/moose/libmesh/include
 rm -rf Eigen
