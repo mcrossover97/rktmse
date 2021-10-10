@@ -19,7 +19,7 @@ The instructions to install Reaktoro can be found [here](https://reaktoro.org/in
 cd /path/to/conda/envs/moose/libmesh/include
 rm -rf Eigen
 ```
-Otherwise, the following error stops compilation:
+Otherwise, the following error probably stops compilation:
 ```
 'all' is not a member of 'eigen'
 ```
