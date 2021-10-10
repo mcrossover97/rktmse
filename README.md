@@ -32,7 +32,9 @@ MOOSE will also uses the Eigen version used by Reaktoro and has no problem with 
 ## 3. Building RKTMSE Application
 
 Clone the application running the following command:
-```git clone https://github.com/mcrossover97/rktmse.git```
+```
+git clone https://github.com/mcrossover97/rktmse.git
+```
 
 In the application root directory, type `make -j4` and wait for the application to be built. Go to application directory and make sure it is working properly:
 `cd rktmse`
