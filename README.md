@@ -6,7 +6,7 @@ A MOOSE-Based Application Coupled with the Reaktoro Geochemical Library.
 
 # Installation
 
-To build *RKTMSE application*, you should have both *[MOOSE](https://mooseframework.inl.gov/)* and *[Reaktoro](https://reaktoro.org/)* installed.
+To build *RKTMSE application*, you should have both *[MOOSE](https://mooseframework.inl.gov/)* and *[Reaktoro](https://reaktoro.org/)* installed first.
 
 ## 1. MOOSE Installation
 
