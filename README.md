@@ -23,11 +23,11 @@ Otherwise, the compilation would probably be stopped complaining:
 ```
 'all' is not a member of 'eigen'
 ```
-This is because MOOSE and Reaktoro each uses a different version of Eigen. While compiling Reaktoro, the compiler might decide to look for the Eigen version used by MOOSE and thus, since this version does not recognize `eigen:all`, an error would stop compilation. By removing the default Eigen library used by MOOSE and having the following line added the `rktmse.mk`:
+This is because MOOSE and Reaktoro each uses a different version of Eigen. While compiling Reaktoro, the compiler might decide to look for the Eigen version used by MOOSE and thus, since this version does not recognize `eigen::all`, an error would stop compilation. By removing the default Eigen library used by MOOSE and having the following line added the `rktmse.mk`:
 ```
 ADDITIONAL_INCLUDES += -I /path/to/Reaktoro/install/directory/include/Reaktoro/deps/eigen3 
 ```
-By doing this, MOOSE will also uses the Eigen version used by Reaktoro and has no problem with this.
+MOOSE will also uses the Eigen version used by Reaktoro and has no problem with this.
 
 ## 3. Building RKTMSE Application
 
