@@ -4,7 +4,7 @@ RKTMSE
 A Moose-Based Application Coupled with the Reaktoro Geochemical Library.
 
 
-#Installation
+# Installation
 
 To use this application, you should have both MOOSE (https://mooseframework.inl.gov/) and Reaktoro (https://reaktoro.org/) frameworks installed.
 
