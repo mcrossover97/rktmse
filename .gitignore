@@ -245,3 +245,5 @@ conf_vars.mk
 # GPerf performance
 *.prof
 *.heap
+
+build/
