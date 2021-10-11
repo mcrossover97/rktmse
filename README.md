@@ -14,7 +14,12 @@ The instructions to install MOOSE can be found [here](https://mooseframework.inl
 
 ## 2. Reaktoro Installation
 
-The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Please install Reaktoro using CMake and change the configuration of the application's Makefile (`rktmse.mk`), modifying `ADDITIONAL_INCLUDES`, `ADDITIONAL_LIBS`, and `LDFLAGS` with respect to the Reaktoro's install directory. After installing Reaktoro, remove the Eigen library located in the `moose` environment:
+Before installing Reaktoro, make sure to deactivate `moose` environment.
+```
+conda deactivate
+``` 
+
+The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Please install Reaktoro using CMake. Make sure to clone Reaktoro in the root directory of the application. If you donwload Reaktoro elsewhere, you should change the configuration of the application's Makefile (`rktmse.mk`), modifying `ADDITIONAL_INCLUDES`, `ADDITIONAL_LIBS`, and `LDFLAGS` with respect to the Reaktoro's install directory. After installing Reaktoro, remove the Eigen library located in the `moose` environment:
 ```
 cd /path/to/conda/envs/moose/libmesh/include
 rm -rf Eigen
@@ -35,8 +40,10 @@ Clone the application running the following command:
 ```
 git clone https://github.com/mcrossover97/rktmse.git
 ```
-
+Activate the `moose` environment:
+```
+conda activate moose
+```
 In the application's root directory, type `make -j4` and wait for the application to be built. Make sure it is working properly by running the application:
-`cd rktmse`
 `./run_tests -j4`
 
