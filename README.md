@@ -34,7 +34,7 @@ ADDITIONAL_INCLUDES += -I /path/to/Reaktoro/install/directory/include/Reaktoro/d
 ```
 MOOSE also uses the Eigen version used by Reaktoro and has no problem with this. Please remember to modify this directory in the Makefile accordingly.
 
-## 3. Building RKTMSE Application
+## 3. Building RKTMSE Application 
 
 Clone the application running the following command:
 ```

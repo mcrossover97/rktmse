@@ -247,3 +247,6 @@ conf_vars.mk
 *.heap
 
 build/
+.libs/
+lib/
+reaktoro/
