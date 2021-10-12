@@ -19,7 +19,7 @@ Before installing Reaktoro, make sure to deactivate the exisiting `moose` enviro
 conda deactivate
 ``` 
 
-The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Install Reaktoro using CMake. Make sure to clone Reaktoro in the root directory of the application. After installing Reaktoro, remove the Eigen library located in the `moose` environment:
+The instructions to install Reaktoro can be found [here](https://reaktoro.org/installation.html). Install Reaktoro using CMake. Make sure to clone Reaktoro in the `projects` directory. After installing Reaktoro, remove the Eigen library located in the `moose` environment:
 ```
 cd /path/to/conda/envs/moose/libmesh/include
 rm -rf Eigen
