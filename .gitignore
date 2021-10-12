@@ -249,4 +249,5 @@ conf_vars.mk
 build/
 .libs/
 lib/
-reaktoro/
+state-cmake-example.txt/
+
