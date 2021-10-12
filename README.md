@@ -40,7 +40,7 @@ Clone the application running the following command:
 ```
 git clone https://github.com/mcrossover97/rktmse.git
 ```
-Activate the `moose` environment:
+Activate the `moose` environment again:
 ```
 conda activate moose
 ```
