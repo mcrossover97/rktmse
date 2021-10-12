@@ -10,7 +10,7 @@ To build the RKTMSE application, you should have both [MOOSE](https://mooseframe
 
 ## 1. MOOSE Installation
 
-The instructions to install MOOSE can be found [here](https://mooseframework.inl.gov/getting_started/installation/). Please follow the instructions exactly as they are.
+The instructions to install MOOSE can be found [here](https://mooseframework.inl.gov/getting_started/installation/conda.html). Please follow the instructions exactly as they are.
 
 ## 2. Reaktoro Installation
 
