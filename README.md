@@ -48,5 +48,5 @@ In the application's root directory, type `make -j4` and wait for the applicatio
 ```
 ./rktmse-opt -i test/tests/kernels/simple_diffusion/simple_diffusion.i
 ```
-If executed successfully, you should be able to see `` in the application's root directory.
+If executed successfully, you should be able to see `state-cmake-example.txt` in the application's root directory.
 
