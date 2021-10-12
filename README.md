@@ -24,15 +24,15 @@ The instructions to install Reaktoro can be found [here](https://reaktoro.org/in
 cd /path/to/conda/envs/moose/libmesh/include
 rm -rf Eigen
 ```
-Otherwise, the following error probably stops the compilation:
+Otherwise, the following error probably terminates the compilation:
 ```
 'all' is not a member of 'eigen'
 ```
-This is because MOOSE and Reaktoro each use different versions of the Eigen library. While compiling Reaktoro, the compiler might decide to look for the Eigen version used by MOOSE and thus, since this version is not compatible with Reaktoro, an error stops compilation. By removing the default Eigen library used by MOOSE and having the following line added to `rktmse.mk`:
+This is because MOOSE and Reaktoro each use different versions of the Eigen library. While compiling Reaktoro, the compiler might decide to look for the Eigen version used by MOOSE and thus, since this version is not compatible with Reaktoro, an error terminates the compilation. By removing the default Eigen library used by MOOSE and having the following line added to `rktmse.mk`:
 ```
 ADDITIONAL_INCLUDES += -I /path/to/Reaktoro/install/directory/include/Reaktoro/deps/eigen3 
 ```
-MOOSE also uses the Eigen version used by Reaktoro and has no problem with this. Please remember to modify this directory in the Makefile accordingly.
+MOOSE also uses the Eigen version used by Reaktoro and has no problem with this. 
 
 ## 3. Building RKTMSE Application 
 
@@ -44,6 +44,9 @@ Activate the `moose` environment:
 ```
 conda activate moose
 ```
-In the application's root directory, type `make -j4` and wait for the application to be built. Make sure it is working properly by running the application:
-`./run_tests -j4`
+In the application's root directory, type `make -j4` and wait for the application to be built. Make sure it is working properly by running a test case:
+```
+./rktmse-opt -i test/tests/kernels/simple_diffusion/simple_diffusion.i
+```
+If executed successfully, you should be able to see `` in the application's root directory.
 
