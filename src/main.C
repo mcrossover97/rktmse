@@ -12,6 +12,7 @@
 #include "Moose.h"
 #include "MooseApp.h"
 #include "AppFactory.h"
+#include "Reaktoro/Reaktoro.hpp"
 
 // Create a performance log
 PerfLog Moose::perf_log("RKTMSE");
@@ -20,6 +21,25 @@ PerfLog Moose::perf_log("RKTMSE");
 int
 main(int argc, char * argv[])
 {
+  // Running a Reaktoro example
+  Reaktoro::ChemicalEditor editor;
+  editor.addAqueousPhaseWithElements("H O C Na Cl");
+  editor.addGaseousPhase({"H2O(g)", "CO2(g)"});
+  editor.addMineralPhase("Halite");
+
+  Reaktoro::ChemicalSystem system(editor);
+
+  Reaktoro::EquilibriumProblem problem(system);
+  problem.setTemperature(60, "celsius");
+  problem.setPressure(300, "bar");
+  problem.add("H2O", 1, "kg");
+  problem.add("CO2", 100, "g");
+  problem.add("NaCl", 0.1, "mol");
+
+  Reaktoro::ChemicalState state = equilibrate(problem);
+
+  state.output("state-cmake-example.txt");
+  
   // Initialize MPI, solvers and MOOSE
   MooseInit init(argc, argv);
 
